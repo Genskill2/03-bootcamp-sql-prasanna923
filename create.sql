@@ -1,17 +1,17 @@
 PRAGMA foreign_keys = ON;
 create table publisher(
-       id serial primary key,
+       id integer primary key,
        name text not NULL,
        country text not NULL
 );
 create table books(
-       id  serial primary key,
+       id  integer primary key,
        title text not NULL,
        publisher int,
        FOREIGN KEY(publisher) REFERENCES publisher(id)
 );
 create table subjects(
-       id serial primary key,
+       id integer primary key,
        name text not NULL
 );
 create table books_subjects(
